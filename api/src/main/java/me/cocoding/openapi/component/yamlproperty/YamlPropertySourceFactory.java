@@ -4,6 +4,7 @@ import org.springframework.core.env.PropertySource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.EncodedResource;
 import org.springframework.core.io.support.PropertySourceFactory;
+import org.springframework.core.io.support.ResourcePropertySource;
 import org.springframework.util.StringUtils;
 
 import java.io.IOException;
@@ -20,6 +21,8 @@ public class YamlPropertySourceFactory implements PropertySourceFactory {
                     new YamlResourcePropertySource(name, resource) :
                     new YamlResourcePropertySource(getNameForResource(resource.getResource()), resource);
         }
+
+        return (name != null ? new ResourcePropertySource(name, resource) : new ResourcePropertySource(resource));
     }
 
     private String getNameForResource(Resource resource) {

@@ -11,7 +11,6 @@ logging:
             sql:
               BasicBinder: TRACE
 
-
 server:
   port: 8080
   tomcat:
@@ -39,7 +38,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        dialect: me.apjung.backend.component.custommysqldialect.CustomMySqlDialect
+        dialect: me.cocoding.openapi.component.custommysqldialect.CustomMySqlDialect
   jackson:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
@@ -79,11 +78,3 @@ spring:
   flyway:
     baseline-version: 0
     out-of-order: true
-
-jwt:
-  access-token-props:
-    secret: 'ZlLHyRf4Ru3CnpVVl6hk9InHkAcHG07x82PufcFR4S4pKnLn0WJgtu4VQERoJauKi2hNIgWCuQF9aFQM7VJGlw=='
-    expiration-time-milli-sec: 3600000
-  refresh-token-props:
-    secret: '3NuzNV3kkmNln/fqxyjqxKDA/1WaaS+V83KYTT8jmX1VpKsMskbqS+xFR3Cv1P9MmskDX3WdHcWka/dgvkGMQg=='
-    expiration-time-milli-sec: 864000000

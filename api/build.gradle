@@ -86,13 +86,6 @@ dependencies {
     runtimeOnly 'com.h2database:h2'
     compile "org.flywaydb:flyway-core"
 
-
-    /*****************************
-     * JWT
-     ****************************/
-    compile 'io.jsonwebtoken:jjwt-api:0.11.1'
-    runtime 'io.jsonwebtoken:jjwt-impl:0.11.1', 'io.jsonwebtoken:jjwt-jackson:0.11.1'
-
     /*****************************
      * Test
      ****************************/
