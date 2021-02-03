@@ -1,0 +1,11 @@
+allprojects {
+    group 'me.cocoding.sejong-openapi'
+    version '1.0'
+}
+
+subprojects {
+    apply plugin: 'java'
+}
+
+project('api') {
+}
